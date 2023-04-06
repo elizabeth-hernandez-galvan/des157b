@@ -3,19 +3,23 @@
 
     const button = document.querySelector('button');
     const body = document.querySelector('body');
+    // const heading = document.querySelectorAll('h3');
     const banner = document.querySelector('#banner');
-    const sections = document.querySelectorAll('section')
-    let mode = 'dark';
+    // const text = document.querySelectorAll('.text');
+    const sections = document.querySelectorAll('section');
+    let mode = 'winter';
 
     button.addEventListener('click', function() {
-        if (mode === 'dark') {
+        if (mode === 'winter') {
             body.className = 'switch';
             banner.className = 'switch';
             button.className = 'switch';
+            
+            // heading.className = 'switch';
             for (const section of sections) {
                 section.className = 'switch';
             }
-            mode = 'light';
+            mode = 'summer';
         } else {
             body.removeAttribute('class');
             banner.removeAttribute('class');
@@ -23,7 +27,7 @@
             for (const section of sections) {
                 section.removeAttribute('class');
             }
-            mode = 'dark'
+            mode = 'winter'
         }
     })
 })()
