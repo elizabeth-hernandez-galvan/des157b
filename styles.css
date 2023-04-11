@@ -52,7 +52,7 @@ body.switch {
     max-width: 1366px;
     /* make sure the columns don't get too small and text stays readable */
     min-width: 900px;
-    margin: 1em auto;
+    margin: 0 auto;
     padding-top: 2em;
 }
 
@@ -66,16 +66,16 @@ header {
     width: 1100px;
     height: 250px;
     margin: auto;
-    background-color: rgb(235, 235, 235);
-    color: #333;
+    background-color:#333;
+    color: rgb(235, 235, 235);
     overflow: hidden;
     display: grid;
 	place-items: center;
 }
 
 #banner.switch {
-    background-color: #333;
-    color: rgb(235, 235, 235);
+    background-color:rgb(235, 235, 235);;
+    color: #333;
     transition: all 2s;
 }
 
@@ -83,7 +83,7 @@ header {
 .flip {
     background-color: transparent;
     width: 100%;
-    height: 500px;
+    height: 350px;
     perspective: 1000px;
 }
   
@@ -120,25 +120,89 @@ header {
 }
 
 #busP {
-    background: url(images/Bus_Stop_P.png);
+    background: url(images/mBus_Stop_P.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 #busR {
-    background: url(images/Bus_Stop_R.png);
+    background: url(images/mBus_Stop_R.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 #busD {
-    background: url(images/Bus_Stop_D.png);
+    background: url(images/mBus_Stop_D.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 #busC {
-    background: url(images/Bus_Stop_C.png);
+    background: url(images/mBus_Stop_C.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*Card Flip Switch Section*/
+.flip.switch {
+    background-color: transparent;
+    width: 100%;
+    height: 350px;
+    perspective: 1000px;
+}
+  
+.inner.switch {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+  
+.flip.switch:hover .inner {
+    transform: rotateY(180deg);
+}
+  
+.card-front.switch, .card-back.switch {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.card-front.switch {
+    background-color: #bbb;
+    color: black;
+}
+
+.card-back.switch {
+    background-color: green;
+    color: darkred;
+    transform: rotateY(180deg);
+}
+
+#busP.switch {
+    background: url(https://www.firstbenefits.org/wp-content/uploads/2017/10/placeholder.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#busR.switch {
+    background: url(https://www.firstbenefits.org/wp-content/uploads/2017/10/placeholder.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#busD.switch {
+    background: url(https://www.firstbenefits.org/wp-content/uploads/2017/10/placeholder.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#busC.switch {
+    background: url(https://www.firstbenefits.org/wp-content/uploads/2017/10/placeholder.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -172,7 +236,7 @@ section li {
 }
 
 section a {
-    line-height: 1.1em;
+    line-height: .9em;
     display: inline-block;
     padding: .5em;
     color: black;
