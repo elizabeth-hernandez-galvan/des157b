@@ -79,6 +79,81 @@ header {
     transition: all 2s;
 }
 
+/*Sun Banner*/
+ .sunny {
+    background: lightblue;
+    width: 1100px;
+    height: 250px;
+    overflow: hidden;
+  }
+  
+  .container,
+  .sky,
+  .sun,
+  .light {
+    position: absolute;
+  }
+  
+  .container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    margin-left: -50%;
+    margin-top: 0px;
+  }
+  
+  .sky {
+    opacity: .8;
+    width: 1100px;
+    height: 40%;
+    top: 10%;
+    left: 0;
+    background: green;
+    z-index: 3;
+  }
+  
+  .sun {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    left: 40%;
+    z-index: 2;
+    background: linear-gradient(#ff0, #d00);
+    box-shadow: 0 0 40px 6px #f20, 0 0 150px 10px #f33;
+    animation: rise 24s ease forwards;
+  }
+  
+  @keyframes rise {
+    0% {
+      top: 50%;
+    }
+    100% {
+      top: 15%;
+    }
+  }
+  
+  .light {
+    opacity: .5;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(at 50% 0%, #ff0, transparent);
+    z-index: 6;
+    animation: over 12s ease forwards;
+  }
+  
+  @keyframes over {
+    0% {
+      opacity: 0
+    }
+    ;
+    100% {
+      opacity: .2
+    }
+    ;
+  }
 /* Rain Banner */
  .rain {
     position: relative;
