@@ -284,8 +284,8 @@ section.switch .card-front {
 }
 
 section.switch .card-back {
-    background-color: green;
-    color: darkred;
+    background-color: #75FAAA;
+    color: darkblue;
     transform: rotateY(180deg);
 }
 
@@ -321,10 +321,17 @@ main {
 
 main section {
     width: 25%;
-    border: 1px rgb(235, 235, 235) dashed;
+    border: 1px rgb(0, 0, 0) dashed;
     margin: 0 1em;
     padding: 1em;
 }
+
+/* main section.switch {
+    width: 25%;
+    border: 1px rgb(0, 0, 0) dashed;
+    margin: 0 1em;
+    padding: 1em;
+} */
 
 a {
     text-decoration: none;
@@ -378,25 +385,27 @@ section.switch > h3{
 
 button {
     position: absolute;
-    top: 20px;
-    right: 20px;
-    padding: 12px;
+    top: 44vh;
+    right: 30wh;
+    width: 16vw;
+    padding: 5px;
     background-color: orange;
     color: #333;
     border: 1px solid transparent;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
 button:hover {
-    background-color: coral;
+    background: rgb(255,64,0);
+    background: linear-gradient(180deg, rgba(255,64,0,1) 0%, rgba(252,176,69,1) 65%, rgba(247,211,159,1) 100%);
     cursor: pointer;
 }
 
 button.switch {
-    background-color: rgb(235, 235, 235);
-    border-color: #333;
+    background: rgb(154, 255, 194);
 }
 
 button.switch:hover {
-    background-color: #333;
-    color: rgb(235, 235, 235)
+    background: linear-gradient(180deg, rgba(77,199,200,1) 0%, rgba(170,255,241,1) 22%, rgba(170,255,200,1) 37%, rgba(152,250,112,1) 63%, rgba(235,255,177,1) 100%);
+    color: rgb(0, 0, 0)
 }
