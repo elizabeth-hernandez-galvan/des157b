@@ -239,7 +239,6 @@ header {
     position: absolute;
     width: 100%;
     height: 100%;
-    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 }
 .card-front {
@@ -386,7 +385,7 @@ section.switch > h3{
 button {
     position: absolute;
     top: 44vh;
-    right: 30wh;
+    right: 67vh;
     width: 16vw;
     padding: 5px;
     background-color: orange;
