@@ -3,11 +3,12 @@
 
     const button = document.querySelector('button');
     const body = document.querySelector('body');
-    // const heading = document.querySelectorAll('h3');
     const banner = document.querySelector('#banner');
+    const t1 = document.getElementById("t1");
+    const t2 = document.getElementById("t2");
+    const t3 = document.getElementById("t3");
+    const t4 = document.getElementById("t4");
     const rain = document.querySelector('.rain');
-    const sun = document.querySelector('.sunny');
-    // const text = document.querySelectorAll('.text');
     const sections = document.querySelectorAll('section');
     let mode = 'winter';
 
@@ -16,9 +17,11 @@
             body.className = 'switch';
             banner.className = 'switch';
             button.className = 'switch';
-            // rain.classList.replace('rain' , 'sunny');
-            // banner.removeAttribute('sunny');
-            // sun.classList.replace('sunny' , 'rain');
+            t1.style.color = "black";
+            t2.style.color = "black";
+            t3.style.color = "black";
+            t4.style.color = "black";
+            rain.classList.replace('rain' , 'sunny');
             // heading.className = 'switch';
             for (const section of sections) {
                 section.className = 'switch';
@@ -28,9 +31,7 @@
             body.removeAttribute('class');
             banner.removeAttribute('class');
             button.removeAttribute('class');
-            // sun.classList.replace('rain' , 'sunny');
-            // banner.removeAttribute('rain');
-            // sun.classList.replace('sunny' , 'rain');
+            rain.classList.replace('sunny' , 'rain');
             for (const section of sections) {
                 section.removeAttribute('class');
             }

@@ -37,12 +37,12 @@
 
 body {
     background-color: darkred;
-    color: rgb(235, 235, 235);
+    color: rgb(248, 224, 0);
     transition: all 2s;
 }
 
 body.switch {
-    background-color: rgb(126, 176, 245);
+    background-color: lightgoldenrodyellow;
     color: #333;
 }
 
@@ -80,7 +80,7 @@ header {
 }
 
 /*Sun Banner*/
- .sunny {
+ /* .sunny {
     background: lightblue;
     width: 1100px;
     height: 250px;
@@ -153,7 +153,18 @@ header {
       opacity: .2
     }
     ;
-  }
+  } */
+
+.sunny {
+    position: relative;
+    width: 1100px;
+    height: 250px;
+    background: url(images/sunBanner.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
 /* Rain Banner */
  .rain {
     position: relative;
@@ -279,25 +290,25 @@ section.switch .card-back {
 }
 
 section.switch #busP {
-    background: url(https://www.firstbenefits.org/wp-content/uploads/2017/10/placeholder.png);
+    background: url(images/mBike.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 section.switch #busR {
-    background: url(https://www.firstbenefits.org/wp-content/uploads/2017/10/placeholder.png);
+    background: url(images/mBike-1.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 section.switch #busD {
-    background: url(https://www.firstbenefits.org/wp-content/uploads/2017/10/placeholder.png);
+    background: url(images/mBike-2.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 section.switch #busC {
-    background: url(https://www.firstbenefits.org/wp-content/uploads/2017/10/placeholder.png);
+    background: url(images/mBike-3.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
