@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: antiquewhite;
+}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+#quote h2 {
+    position: absolute;
+    padding: 1em;
+    font-size: 2em;
+    background-color: black;
+    transition: all 2.5s;
+}
+
+#line1 {
+    bottom: 0%;
+    left: 0%;
+}
+
+#line2 {
+    bottom: 10%;
+    left: 10%;
+}
+
+#line3 {
+    bottom: 20%;
+    left: 20%;
+}
+
+#line4 {
+    bottom: 30%;
+    left: 30%;
+}
+
+#line5 {
+    bottom: 40%;
+    left: 40%;
+}
+
+.fa-expand {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 36px;
+    color: orange;
+}
+
+.fa-expand:hover {
+    cursor: pointer;
+}
+
+/* .hidden {
+    opacity: 0;
+} */
+
+.showing {
+    opacity: 1;
+}
