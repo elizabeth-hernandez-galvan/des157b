@@ -16,7 +16,7 @@
         line: [line1, line2, line3, line4, line5]
     }
 
-    const intervalID = setInterval(checkTime, 1000)
+    const intervalID = setInterval(checkTime, 1000);
     
     function checkTime(){
         console.log(parseInt(myVideo.currentTime));
