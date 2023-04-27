@@ -1,0 +1,14 @@
+h1{
+    font-family: 'Shrikhand', cursive;
+    font-size: 108px;
+    line-height: 120px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#title{
+    padding: 5% 5%;
+    background-color: aquamarine;
+    width: 480px;
+    height: 750px;
+}
