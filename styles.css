@@ -295,7 +295,7 @@ section.switch #busP {
 }
 
 section.switch #busR {
-    background: url(images/mBike-1.png);
+    background: url(images/mBike-3.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -307,7 +307,7 @@ section.switch #busD {
 }
 
 section.switch #busC {
-    background: url(images/mBike-3.png);
+    background: url(images/mBike-1.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
