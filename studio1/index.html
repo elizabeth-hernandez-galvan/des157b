@@ -8,6 +8,10 @@
     <title>Blockbuster Video!</title>
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet"/>
+    <script src="https://kit.fontawesome.com/4a6fdce8e1.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
 
     <link href="styles.css" rel="stylesheet"/>
     <script src="script.js" defer></script>
@@ -20,15 +24,17 @@
     </section>
 
     <section class="section1">
-        <video id="myVideo" poster="images/poster.jpg" muted autoplay loop playsinline>
-            <source src="" type="video/webm">
-            <source src="media/Luna_food.mp4" type="video/mp4">
+        <video id="myVideo" poster="images/Luna.png" muted autoplay loop playsinline>
+            <source rel="preload" src="media/Lune_Dress.webm" type="video/webm">
+            <source rel="preload" src="media/Luna_Dress.mp4" type="video/mp4">
 
-            <p>Your browser doesn't support HTML5 video. Here is a <a href="media/cranes-short.mp4">link to the video</a>
+            <p>Your browser doesn't support HTML5 video. Here is a <a href="media/Luna_Dress.mp4">link to the video</a>
                 instead.</p>
 
         </video>
 
+        <div id="overlay" class="hidden"></div>
+        <i class="fa-solid fa-paw fa-fade" style="display:initial"></i>
         <i class="fas fa-expand"></i>
 
         <div id="quote">
@@ -38,7 +44,7 @@
         </div>
     </section>
     
-    <section class="section2">
+    <!-- <section class="section2">
         <video id="myVideo" poster="images/poster.jpg" muted autoplay loop playsinline>
             <source src="" type="video/webm">
             <source src="media/Luna_toy.mp4" type="video/mp4">
@@ -68,6 +74,6 @@
             <h2 id="line2" class="hidden">with a real tale to tell</h2>
             <h2 id="line3" class="hidden">and a real tail to tell it with</h2>
         </div>
-    </section>
+    </section> -->
 </body>
 </html>

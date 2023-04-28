@@ -7,14 +7,24 @@
     const line1 = document.querySelector('#line1');
     const line2 = document.querySelector('#line2');
     const line3 = document.querySelector('#line3');
-    const line4 = document.querySelector('#line4');
-    const line5 = document.querySelector('#line5');
+    // const line4 = document.querySelector('#line4');
+    // const line5 = document.querySelector('#line5');
 
     const quote = {
-        start: [0,5,8],
-        stop:[4,7,10],
-        line: [line1, line2, line3, line4, line5]
+        start: [0,3,7],
+        stop:[2,6,10],
+        line: [line1, line2, line3]
     }
+
+    const loading = document.querySelector('.fa-paw');
+    myVideo.addEventListener('playing', function () {
+        loading.style.display = 'none';
+    });
+
+    myVideo.addEventListener('mousemove', function(event) {
+        console.log(event.clientX);
+        myVideo.playbackRate = event.clientX / 200 + 0.25;
+    });
 
     const intervalID = setInterval(checkTime, 1000);
     
@@ -40,4 +50,5 @@
 
         }
     });
+
 })();

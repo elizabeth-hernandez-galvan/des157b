@@ -60,28 +60,32 @@ body {
 
 #quote h2 {
     position: absolute;
+    width: 100%;
     padding: 1em;
-    font-size: 2em;
-    background-color: black;
+    font-size: 3em;
+    font-family: 'Permanent Marker', cursive;
     transition: all 2.5s;
 }
 
 #line1 {
-    bottom: 0%;
-    left: 0%;
+    bottom: 5%;
+    left: 0;
+    text-align: left;
 }
 
 #line2 {
-    bottom: 10%;
-    left: 10%;
+    top: 5%;
+    left: 0%;
+    text-align: right;
 }
 
 #line3 {
-    bottom: 20%;
-    left: 20%;
+    bottom: 25%;
+    left: 0;
+    text-align: center;
 }
 
-#line4 {
+/* #line4 {
     bottom: 30%;
     left: 30%;
 }
@@ -89,7 +93,7 @@ body {
 #line5 {
     bottom: 40%;
     left: 40%;
-}
+} */
 
 .fa-expand {
     position: absolute;
@@ -103,10 +107,26 @@ body {
     cursor: pointer;
 }
 
-/* .hidden {
+.hidden {
     opacity: 0;
-} */
+}
 
 .showing {
     opacity: 1;
+}
+
+#overlay {
+    position: fixed;
+    min-height: 100%;
+    min-width: 100%;
+    background-color: lightpink;
+    transition: 1s ease;
+}
+
+.fa-paw {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 75px;
+    color: hotpink;
 }
