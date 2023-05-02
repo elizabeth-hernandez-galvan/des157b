@@ -1,40 +1,48 @@
 {
     "day1":{
+        "day": "Monday",
         "date" : "4/17",
         "miles" : 2.46
     },
     
     "day2":{
+        "day": "Tuesday",
         "date" : "4/18",
         "miles" : 2.26
     },
 
     "day3":{
+        "day": "Wednesday",
         "date" : "4/19",
         "miles" : 3.03
     },
 
     "day4":{
+        "day": "Thursday",
         "date" : "4/20",
         "miles" : 2.53
     },
 
     "day5":{
+        "day": "Friday",
         "date" : "4/21",
         "miles" : 3.73
     },
 
     "day6":{
+        "day": "Saturday",
         "date" : "4/22",
         "miles" : 0.69
     },
 
     "day7":{
+        "day": "Sunday",
         "date" : "4/23",
         "miles" : 5.92
     },
 
     "day8":{
+        "day": "Monday",
         "date" : "4/24",
         "miles" : 3.98
     }

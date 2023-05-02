@@ -11,7 +11,7 @@ async function getData(){
 
 function outputHTML(data){
     let html = '<p>';
-    html += `At ${data.point2.date} I walkedg ${[data.point2.miles]}`;
+    html += `At ${data.point2.date} I walked ${[data.point2.miles]}`;
     html += '<p>';
     return html;
 }
@@ -34,6 +34,7 @@ function createEvents(){
         btn.addEventListener('click', function(event){
             const id = event.target.id; 
             // console.log(id)
+            document.querySelector('#result').classList.remove("hide");
             updateInterface(id, globalData);
         })
     }
@@ -42,7 +43,7 @@ function createEvents(){
 function updateInterface(value, jsonData){
     console.log(value);
     let text = '<p>';
-    text += `In <strong>${jsonData[value].date}</strong> I walked <strong>${jsonData[value].miles}</strong> miles`; 
+    text += `On <strong><em>${jsonData[value].day}</em></strong>, <strong><em>${jsonData[value].date}</em></strong> I walked <strong><em>${jsonData[value].miles}</em></strong> miles`; 
     text += '</p>';
     document.querySelector('#result').innerHTML = text;
 }
