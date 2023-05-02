@@ -28,9 +28,9 @@ h1{
     align-items: center;
     position: absolute;
     left: 32%;
-    bottom: 20%;
+    bottom: 24%;
     height: 10%;
-    width: 15%;
+    width: 17%;
     background-color: bisque;
     border-radius: 40%;
 }
@@ -45,6 +45,21 @@ h1{
     text-align: center;
     line-height: 1.5;
     border-radius: 15%;
+}
+
+strong:nth-child(1){
+    font-size: 1.15em;
+    color: #4e350e;
+}
+
+strong:nth-child(2){
+    font-size: 1.15em;
+    color: sienna;
+}
+
+strong:nth-child(3){
+    font-size: 1.15em;
+    color: #d49333;
 }
 
 .hide {

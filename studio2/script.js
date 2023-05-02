@@ -43,7 +43,7 @@ function createEvents(){
 function updateInterface(value, jsonData){
     console.log(value);
     let text = '<p>';
-    text += `On <strong><em>${jsonData[value].day}</em></strong>, <strong><em>${jsonData[value].date}</em></strong> I walked <strong><em>${jsonData[value].miles}</em></strong> miles`; 
+    text += `On <strong><em>${jsonData[value].day}</em></strong> <strong><em>${jsonData[value].date}</em></strong>, I walked <strong><em>${jsonData[value].miles}</em></strong> miles`; 
     text += '</p>';
     document.querySelector('#result').innerHTML = text;
 }
