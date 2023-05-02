@@ -42,7 +42,7 @@ function createEvents(){
 function updateInterface(value, jsonData){
     console.log(value);
     let text = '<p>';
-    text += `At ${jsonData[value].date} I walked ${jsonData[value].miles} miles`; 
+    text += `In <strong>${jsonData[value].date}</strong> I walked <strong>${jsonData[value].miles}</strong> miles`; 
     text += '</p>';
     document.querySelector('#result').innerHTML = text;
 }

@@ -8,18 +8,43 @@ h1{
 
 #title{
     padding: 5% 5%;
-    background-color: aquamarine;
     width: 480px;
     height: 630px;
 }
+
 #myData{
     padding: 5% 5%;
-    background-color: lightcoral;
     position: absolute;
     left: 50%;
     top: 0;
     width: 480px;
     height: 630px;
+}
+
+#result{
+    padding: 5% 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 35%;
+    top: 30%;
+    height: 20%;
+    width: 26%;
+    background-color: bisque;
+    border-radius: 40%;
+}
+
+#result > p{
+    /* position: absolute;
+    left: 0%;
+    top: 0%; */
+    /* height: 90%;
+    width: 90%; */
+    font-size: 1.5em;
+    text-align: center;
+    line-height: 1.5;
+    border-radius: 15%;
 }
 
 .flex-container {
@@ -32,10 +57,43 @@ h1{
 
 ul{
     list-style: none;
+    column-count: 2;
 }
 
 li {
     display:block;
+}
+
+li:nth-child(1) > .fa-shoe-prints{
+    color: #FF79F2;
+}
+
+li:nth-child(2) > .fa-shoe-prints{
+    color: #FA5E46;
+}
+
+li:nth-child(3) > .fa-shoe-prints{
+    color: #0BBD52;
+}
+
+li:nth-child(4) > .fa-shoe-prints{
+    color: #3D4EE7;
+}
+
+li:nth-child(5) > .fa-shoe-prints{
+    color: #FF9900;
+}
+
+li:nth-child(6) > .fa-shoe-prints{
+    color: #FFF26A;
+}
+
+li:nth-child(7) > .fa-shoe-prints{
+    color: #767ED4;
+}
+
+li:nth-child(8) > .fa-shoe-prints{
+    color: #FF79F2;
 }
 
 p {
