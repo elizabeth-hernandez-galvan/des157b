@@ -49,3 +49,7 @@ p{
 #brief::-webkit-scrollbar{
     display: none;
   }
+
+#click{
+    font-size: 11px;
+}
