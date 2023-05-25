@@ -74,6 +74,7 @@ p{
 .col {
     display: flex;
     flex-direction: column;
+    align-items: center;
     flex-basis: 100%;
     flex: 1;
 }
@@ -81,4 +82,19 @@ p{
     max-width: 1200px;
     text-indent: 0;
 }
-  
+
+#title1{
+    font-size: 2rem;
+   
+}
+
+.border{
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
+}
+
+#imgs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
