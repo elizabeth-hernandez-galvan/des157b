@@ -92,6 +92,9 @@ p{
     border-top: 5px solid black;
     border-bottom: 5px solid black;
 }
+.border-btm{
+    border-top: 5px solid black;
+}
 
 #imgs{
     display: flex;
