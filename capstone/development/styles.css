@@ -53,3 +53,32 @@ p{
 #click{
     font-size: 11px;
 }
+
+#title{
+    font-size: 2rem;
+}
+
+.some-page-wrapper {
+    margin: 15px;
+  }
+  
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 1%;
+}
+  
+.col {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+}
+.summary{
+    max-width: 1200px;
+    text-indent: 0;
+}
+  
