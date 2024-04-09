@@ -31,6 +31,10 @@
             body.removeAttribute('class');
             banner.removeAttribute('class');
             button.removeAttribute('class');
+            t1.style.color = "white";
+            t2.style.color = "white";
+            t3.style.color = "white";
+            t4.style.color = "white";
             luna.classList.replace('jiji' , 'luna');
             // header.removeAttribute('class')
             for (const section of sections) {
