@@ -157,25 +157,25 @@ header {
 }
 
 #card1 {
-    background: url(https://i.postimg.cc/DfL7SMxm/Screenshot-2024-04-09-at-12-01-28-AM.png);
+    background: url(images/luna1.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 #card2 {
-    background: url(https://i.postimg.cc/0yXNYXhm/Screenshot-2024-04-09-at-12-05-49-AM.png);
+    background: url(images/luna2.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 #card3 {
-    background: url(https://i.postimg.cc/QtvqzqPn/Screenshot-2024-04-09-at-12-10-36-AM.png);
+    background: url(images/luna3.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 #card4 {
-    background: url(https://i.postimg.cc/0QQLqxfX/Screenshot-2024-04-09-at-12-16-48-AM.png);
+    background: url(images/luna4.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -193,25 +193,25 @@ section.switch .card-back {
 }
 
 section.switch #card1 {
-    background: url(https://i.postimg.cc/gjZWhd1t/Screenshot-2024-04-09-at-12-22-16-AM.png);
+    background: url(images/jiji1.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 section.switch #card2 {
-    background: url(https://i.postimg.cc/GmGSyKzQ/Screenshot-2024-04-09-at-12-28-37-AM.png);
+    background: url(images/jiji2.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 section.switch #card3 {
-    background: url(https://i.postimg.cc/3wGmtfzy/Screenshot-2024-04-09-at-12-26-23-AM.png);
+    background: url(images/jiji3.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 section.switch #card4 {
-    background: url(https://i.postimg.cc/jjd8Wb1H/Screenshot-2024-04-09-at-12-30-13-AM.png);
+    background: url(images/jiji4.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
