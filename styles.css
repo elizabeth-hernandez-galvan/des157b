@@ -1,0 +1,300 @@
+* {
+    box-sizing: border-box;
+}
+
+/* FIXED WRAPPER */
+.wrap {
+    overflow: hidden; /* HIDE SCROLL BAR */
+    background: none;
+}
+   
+/* MOVING WRAPPER */
+.move { 
+    display: flex; 
+}
+  
+/* LONG HORIZONTAL TEXT ROW */
+.text {
+    flex-shrink: 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    overflow: hidden;
+}
+
+/* TEXT ANIMATION - RIGHT TO LEFT */
+/* 4 ITEMS -400%, CHANGE THIS IF YOU ADD/REMOVE ITEMS */
+@keyframes newsText {
+    0% { transform: translate3d(100%, 0, 0); }
+    100% { transform: translate3d(-400%, 0, 0); }
+  }
+  .move { animation: newsText linear 20s infinite; }
+  .move:hover { animation-play-state: paused; }
+
+body {
+    background: linear-gradient(to top, #283e51,#0a2342 );
+    color: rgb(255, 255, 255);
+    transition: all 2s;
+}
+
+body.switch {
+    background: linear-gradient(to bottom,rgba(253,29,29,1) 25%, rgba(252,176,69,1) 100%);
+    color: #333;
+}
+
+#container {
+    position: relative;
+    width: 100%;
+    max-width: 1366px;
+    /* make sure the columns don't get too small and text stays readable */
+    min-width: 900px;
+    margin: 0 auto;
+    padding-top: 2em;
+}
+
+header {
+    margin: 0 auto 2em auto;
+}
+
+#banner {
+    position: relative;
+    display: flex;
+    width: 95%;
+    height: 250px;
+    margin: auto;
+    /* background-color:#333; */
+    color: rgb(235, 235, 235);
+    overflow: hidden;
+    display: grid;
+	place-items: center;
+}
+
+#banner.switch {
+    background-color:rgb(235, 235, 235);;
+    color: #333;
+    transition: all 2s;
+}
+.jiji {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    background: url(https://media-be.chewy.com/wp-content/uploads/2021/05/11162926/German-Shepherd-1358309706-1024x591.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Luna Banner */
+ .luna {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    background-image: url(https://media-be.chewy.com/wp-content/uploads/2021/05/11162926/German-Shepherd-1358309706-1024x591.jpg);
+    background-size: cover;
+    background-position: center;
+    animation: color-change 5s linear infinite;
+    animation-delay: 1s;
+}
+
+/* Applying filter at different angle using keyframe*/
+@keyframes color-change {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    50% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+/*Card Flip Section*/
+.flip {
+    background-color: transparent;
+    width: 100%;
+    height: 350px;
+    perspective: 1000px;
+}
+
+.inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+  
+.flip:hover .inner {
+    transform: rotateY(180deg);
+}
+  
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+.card-front {
+    background-color: #bbb;
+    color: black;
+}
+
+.card-back {
+    background-color: goldenrod;
+    color: darkred;
+    transform: rotateY(180deg);
+}
+
+#card1 {
+    background: url(https://dogtime.com/wp-content/uploads/sites/12/2023/11/GettyImages-529202089-e1701095552546.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#card2 {
+    background: url(https://dogtime.com/wp-content/uploads/sites/12/2023/11/GettyImages-529202089-e1701095552546.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#card3 {
+    background: url(https://dogtime.com/wp-content/uploads/sites/12/2023/11/GettyImages-529202089-e1701095552546.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#card4 {
+    background: url(https://dogtime.com/wp-content/uploads/sites/12/2023/11/GettyImages-529202089-e1701095552546.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*Card Flip Switch Section*/
+section.switch .card-front {
+    background-color: #bbb;
+    color: black;
+}
+
+section.switch .card-back {
+    background-color: #75FAAA;
+    color: darkblue;
+    transform: rotateY(180deg);
+}
+
+section.switch #card1 {
+    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdvaA2CDyr1gvjBLnkjEvKXKQaHbCLnb8rqVqThVCovw&s);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+section.switch #card2 {
+    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdvaA2CDyr1gvjBLnkjEvKXKQaHbCLnb8rqVqThVCovw&s);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+section.switch #card3 {
+    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdvaA2CDyr1gvjBLnkjEvKXKQaHbCLnb8rqVqThVCovw&sg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+section.switch #card4 {
+    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdvaA2CDyr1gvjBLnkjEvKXKQaHbCLnb8rqVqThVCovw&s);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1em 1em;
+}
+
+main section {
+    width: 25%;
+    border: 1px rgb(0, 0, 0) dashed;
+    margin: 0 1em;
+    padding: 1em;
+}
+
+a {
+    text-decoration: none;
+}
+
+ol,
+ul {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+section li {
+    padding-left: 1.2em;
+}
+
+section a {
+    line-height: .9em;
+    display: inline-block;
+    padding: .5em;
+    color: black;
+}
+
+section a:hover {
+    background-color: white;
+    color: #333;
+}
+
+section.switch a {
+    color: #333;
+}
+
+section.switch a:hover {
+    background-color: #333;
+    color: rgb(235, 235, 235);
+}
+
+section > h3{
+    text-align: center;
+    padding: 5% 0;
+    border-top: 5px solid orange;
+    border-bottom: 5px solid orange;
+}
+
+section.switch > h3{
+    text-align: center;
+    padding: 5% 0;
+    border-top: 5px solid green;
+    border-bottom: 5px solid green;
+}
+
+button {
+    position: absolute;
+    top: 45%;
+    right: 42%;
+    width: 16vw;
+    padding: 5px;
+    background-color: orange;
+    color: #333;
+    border: 1px solid transparent;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+button:hover {
+    background:  rgb(255, 196, 93);
+    cursor: pointer;
+}
+
+button.switch {
+    background: rgb(154, 255, 194);
+}
+
+button.switch:hover {
+    background:  rgb(255, 196, 93);
+}
