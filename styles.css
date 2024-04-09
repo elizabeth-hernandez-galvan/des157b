@@ -41,7 +41,7 @@ body {
 }
 
 body.switch {
-    background: linear-gradient(to bottom,rgba(253,29,29,1) 25%, rgba(252,176,69,1) 100%);
+    background: linear-gradient(to bottom,rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
     color: #333;
 }
 
@@ -81,7 +81,7 @@ header {
     position: relative;
     width: 100%;
     height: 250px;
-    background: url(https://media-be.chewy.com/wp-content/uploads/2021/05/11162926/German-Shepherd-1358309706-1024x591.jpg);
+    background: url(https://i.postimg.cc/G2rq7YFw/jiji-banner.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -92,7 +92,7 @@ header {
     position: relative;
     width: 100%;
     height: 250px;
-    background-image: url(https://media-be.chewy.com/wp-content/uploads/2021/05/11162926/German-Shepherd-1358309706-1024x591.jpg);
+    background-image: url(https://i.postimg.cc/85Gn2Lmm/luna-banner.png);
     background-size: cover;
     background-position: center;
     animation: color-change 5s linear infinite;
@@ -146,31 +146,32 @@ header {
 }
 
 .card-back {
-    background-color: goldenrod;
-    color: darkred;
+    background-color: rgb(0, 114, 160);
+    color: white;
+    text-align: center;
     transform: rotateY(180deg);
 }
 
 #card1 {
-    background: url(https://dogtime.com/wp-content/uploads/sites/12/2023/11/GettyImages-529202089-e1701095552546.jpg);
+    background: url(https://i.postimg.cc/DfL7SMxm/Screenshot-2024-04-09-at-12-01-28-AM.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 #card2 {
-    background: url(https://dogtime.com/wp-content/uploads/sites/12/2023/11/GettyImages-529202089-e1701095552546.jpg);
+    background: url(https://i.postimg.cc/0yXNYXhm/Screenshot-2024-04-09-at-12-05-49-AM.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 #card3 {
-    background: url(https://dogtime.com/wp-content/uploads/sites/12/2023/11/GettyImages-529202089-e1701095552546.jpg);
+    background: url(https://i.postimg.cc/QtvqzqPn/Screenshot-2024-04-09-at-12-10-36-AM.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 #card4 {
-    background: url(https://dogtime.com/wp-content/uploads/sites/12/2023/11/GettyImages-529202089-e1701095552546.jpg);
+    background: url(https://i.postimg.cc/0QQLqxfX/Screenshot-2024-04-09-at-12-16-48-AM.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -182,31 +183,31 @@ section.switch .card-front {
 }
 
 section.switch .card-back {
-    background-color: #75FAAA;
+    background-color: #c9ffdf;
     color: darkblue;
     transform: rotateY(180deg);
 }
 
 section.switch #card1 {
-    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdvaA2CDyr1gvjBLnkjEvKXKQaHbCLnb8rqVqThVCovw&s);
+    background: url(https://i.postimg.cc/gjZWhd1t/Screenshot-2024-04-09-at-12-22-16-AM.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 section.switch #card2 {
-    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdvaA2CDyr1gvjBLnkjEvKXKQaHbCLnb8rqVqThVCovw&s);
+    background: url(https://i.postimg.cc/GmGSyKzQ/Screenshot-2024-04-09-at-12-28-37-AM.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 section.switch #card3 {
-    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdvaA2CDyr1gvjBLnkjEvKXKQaHbCLnb8rqVqThVCovw&sg);
+    background: url(https://i.postimg.cc/3wGmtfzy/Screenshot-2024-04-09-at-12-26-23-AM.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 section.switch #card4 {
-    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdvaA2CDyr1gvjBLnkjEvKXKQaHbCLnb8rqVqThVCovw&s);
+    background: url(https://i.postimg.cc/jjd8Wb1H/Screenshot-2024-04-09-at-12-30-13-AM.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
