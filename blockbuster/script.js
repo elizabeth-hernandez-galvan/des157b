@@ -9,7 +9,6 @@
     const line3 = document.querySelector('#line3');
 
     const intervalID = setInterval(checkTime, 1000);
-    const intervalvert = setInterval(checkTimeV, 1000);
 
     const video = document.getElementById('video');
     const videov = document.getElementById('video-vertical');
@@ -47,9 +46,7 @@
         } else {
             line3.className = "hidden";
         }
-    }    
-
-    function checkTimeV() {
+        // vertical video
         if (1 < videov.currentTime && videov.currentTime < 4){
             line1.className = "showing";
         } else {
