@@ -25,6 +25,30 @@
     z-index: 1;
 }
 
+.fa-paw {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 36px;
+    color: white;
+    transform: translate(-50%,-50%);
+    animation: dog 2s infinite alternate ease-in-out;
+}
+
+@keyframes dog {
+    0%{
+        opacity: .5;
+        transform: scale(1);
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: .5;
+        transform: scale(1.5);
+    }
+}
+
 .fa-expand {
     position: absolute;
     top: 10px;

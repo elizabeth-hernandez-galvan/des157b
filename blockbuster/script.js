@@ -2,6 +2,7 @@
     'use strict';
 
     const fs = document.querySelector('.fa-expand');
+    const loading = document.querySelector('.fa-paw');
     const mute = document.querySelector('#mute');
     
     const line1 = document.querySelector('#line1');
@@ -12,6 +13,14 @@
 
     const video = document.getElementById('video');
     const videov = document.getElementById('video-vertical');
+
+    video.addEventListener('playing', function(){
+        loading.style.display = 'none';
+    })
+
+    videov.addEventListener('playing', function(){
+        loading.style.display = 'none';
+    })
 
     fs.addEventListener('click', function(){
 
