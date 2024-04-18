@@ -80,42 +80,42 @@ section {
 
 #line1 {
     position: absolute;
-    min-width: 45rem;
-    top: 0;
-    left: 1.25rem;
+    min-width: 35rem;
+    bottom: 0;
+    right: 1.25rem;
     transition-duration: 2s;
     color: white;
     font-weight: 700;
     text-transform: uppercase;
-    font-size: 4.5rem;
+    font-size: 3.5rem;
     font-family: "Poppins", sans-serif;
-    text-align: left;
+    text-align: center;
 }
 
 #line2 {
     position: absolute;
-    min-width: 45rem;
-    top: 50%;
-    right: 1.25rem;
+    min-width: 35rem;
+    bottom: 50%;
+    right: 3.25rem;
     transition-duration: 1s;
     color: white;
     font-weight: 700;
     text-transform: uppercase;
-    font-size: 4.5rem;
+    font-size: 3.5rem;
     font-family: "Poppins", sans-serif;
     text-align: right;
 }
 
 #line3 {
     position: absolute;
-    min-width: 45rem;
+    min-width: 35rem;
     bottom: 1.25rem;
     left: 1.25rem;
     transition-duration: 1s;
     color: white;
     font-weight: 700;
     text-transform: uppercase;
-    font-size: 4.5rem;
+    font-size: 3.5rem;
     font-family: "Poppins", sans-serif;
     text-align: center;
 }
