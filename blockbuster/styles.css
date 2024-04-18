@@ -4,6 +4,25 @@
     bottom: 0;
     min-width: 100%;
     min-height: 100%;
+    visibility: visible;
+}
+
+#video-vertical {
+    visibility: hidden;
+}
+
+#mute{
+    font-size: 1rem;
+    width: 4rem;
+    padding: 0.5rem 0.5rem;
+    position: absolute;
+    top: 0;
+    margin-top: 1%;
+    border: solid 0.25rem white;
+    border-radius: 1rem;
+    background-color: transparent;
+    color: white;
+    z-index: 1;
 }
 
 .fa-expand {
@@ -12,6 +31,7 @@
     right: 10px;
     font-size: 36px;
     color: white;
+    z-index: 1;
 }
 
 .fa-expand:hover {
@@ -36,7 +56,7 @@ section {
 
 #line1 {
     position: absolute;
-    min-width: 700px;
+    min-width: 45rem;
     top: 0;
     left: 1.25rem;
     transition-duration: 2s;
@@ -50,9 +70,9 @@ section {
 
 #line2 {
     position: absolute;
-    min-width: 700px;
+    min-width: 45rem;
     top: 50%;
-    right: 20px;
+    right: 1.25rem;
     transition-duration: 1s;
     color: white;
     font-weight: 700;
@@ -64,7 +84,7 @@ section {
 
 #line3 {
     position: absolute;
-    min-width: 700px;
+    min-width: 45rem;
     bottom: 1.25rem;
     left: 1.25rem;
     transition-duration: 1s;
@@ -74,4 +94,74 @@ section {
     font-size: 4.5rem;
     font-family: "Poppins", sans-serif;
     text-align: center;
+}
+
+/* Design For Tablet */
+@media screen and (max-width: 768px) and (min-width: 481px) {
+    #video-vertical {
+        position: fixed;
+        right: 0;
+        top: 0;
+        width: 100%;
+        min-height: 100%;
+        visibility: visible;
+    }
+
+    #video {
+        visibility: hidden;
+    }
+
+    #line1 {
+        min-width: 30rem;
+        top: 0;
+        left: 1.25rem;
+    }
+    #line2 {
+        min-width: 20rem;
+        top: 50%;
+        right: 1.25rem;
+        text-align: center;
+    }
+    #line3 {
+        min-width: 30rem;
+        bottom: 1.25rem;
+        left: 1.25rem;
+    }
+}
+
+/* Design For Mobile */
+@media screen and (max-width: 480px) {
+    #video-vertical {
+        position: fixed;
+        right: 0;
+        top: 0;
+        width: 100%;
+        min-height: 100%;
+        object-fit: fill;
+        visibility: visible;
+    }
+
+    #video {
+        visibility: hidden;
+    }
+
+    #line1 {
+        min-width: 20rem;
+        font-size: 2.5rem;
+        top: 0;
+        left: 1.25rem;
+    }
+    #line2 {
+        min-width: 20rem;
+        font-size: 2.5rem;
+        top: 50%;
+        right: 1.25rem;
+        text-align: center;
+    }
+    #line3 {
+        min-width: 20rem;
+        font-size: 2.5rem;
+        bottom: 1.25rem;
+        left: 1.25rem;
+    }
 }
