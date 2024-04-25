@@ -1,0 +1,40 @@
+#left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #AED3E3;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 40%;
+    height: 100%;
+    position: absolute;
+    top:0;
+}
+
+#right{
+    background-color: beige;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left: 40%;
+}
+
+h1{
+    text-align: center;
+    font-family: "Permanent Marker", cursive;
+    font-size: 5rem;
+}
+
+p{
+    font-family: "Kalam", cursive;
+    font-size: 1rem;
+    line-height: 2;
+    text-indent: 8%;
+    max-width: 600px;
+}
