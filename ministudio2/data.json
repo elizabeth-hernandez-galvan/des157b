@@ -1,54 +1,52 @@
 {
-   "studio2":[
-      {
-         "day":"April 26, 2024",
-         "time":"10:34",
-         "image-url":"images/April26_Morning.jpg"
+   "img1":{
+      "day":"April 26, 2024 - Morning",
+      "time":"10:34am",
+      "image":"images/April26_Morning.jpg"
+   },
+   "img2":{
+      "day":"April 26, 2024 - Morning",
+      "time":"10:44am",
+      "image":"images/April26_Morning2.jpg"
+   },
+   "img3":{
+      "day":"April 26, 2024 - Noon",
+      "time":"12:24pm",
+      "image":"images/April26_noon.jpg"
+   },
+   "img4":{
+         "day":"April 26, 2024 - Noon",
+         "time":"12:32pm",
+         "image":"images/April26_noon2.jpg"
       },
-      {
-         "day":"April 26, 2024",
-         "time":"10:44",
-         "image-url":"images/April26_Morning2.jpg"
+   "img5":{
+         "day":"April 26, 2024 - Afternoon",
+         "time":"4:21pm",
+         "image":"images/April26_Afternoon.jpg"
       },
-      {
-         "day":"April 26, 2024",
-         "time":"12:24",
-         "image-url":"images/April26_noon.jpg"
+   "img6":{
+         "day":"April 26, 2024 - Afternoon",
+         "time":"4:56pm",
+         "image":"images/April26_Afternoon2.jpg"
       },
-      {
-         "day":"April 26, 2024",
-         "time":"12:32",
-         "image-url":"images/April26_noon2.jpg"
+   "img7":{
+         "day":"April 26, 2024 - Morning",
+         "time":"9:00am",
+         "image":"images/April27_Morning.jpg"
       },
-      {
-         "day":"April 26, 2024",
-         "time":"4:21",
-         "image-url":"images/April26_Afternoon.jpg"
+   "img8":{
+         "day":"April 27, 2024 - Morning",
+         "time":"9:05am",
+         "image":"images/April27_Morning2.jpg"
       },
-      {
-         "day":"April 26, 2024",
-         "time":"4:56",
-         "image-url":"images/April26_Afternoon2.jpg"
+   "img9":{
+         "day":"April 27, 2024 - Noon",
+         "time":"11:09am",
+         "image":"images/April27_noon.jpg"
       },
-      {
-         "day":"April 26, 2024",
-         "time":"9:00",
-         "image-url":"images/April27_Morning.jpg"
-      },
-      {
-         "day":"April 27, 2024",
-         "time":"9:05",
-         "image-url":"images/April27_Morning2.jpg"
-      },
-      {
-         "day":"April 27, 2024",
-         "time":"11:09",
-         "image-url":"images/April27_noon.jpg"
-      },
-      {
-         "day":"April 27, 2024",
-         "time":"11:10",
-         "image-url":"images/April27_noon2.jpg"
+   "img10":{
+         "day":"April 27, 2024 - Noon",
+         "time":"11:10am",
+         "image":"images/April27_noon2.jpg"
       }
-   ]
 }

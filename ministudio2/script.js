@@ -7,8 +7,7 @@
 
     const date = document.querySelector('#date');
     const time = document.querySelector('#time');
-    const colorbackground = document.querySelector('body');
-    const wallpaper = document.querySelector('#wallpaper');
+    const wallpaper = document.querySelector('#image-url');
 
     async function getData() {
         const timeTaken = await fetch('data.json');
@@ -20,11 +19,21 @@
     }
 
     function showTime(point, data) {
-        date.innerHTML = `${data[point].day}, ${data[point].date}`;
-        time.innerHTML = data[point].time_taken;
-        colorbackground.style.backgroundColor = data[point].color;
-        wallpaper.src = data[point].wallpaper;
+        date.innerHTML = data[point].day;
+        time.innerHTML = data[point].time;
+        wallpaper.src = data[point].image;
+        console.log(data[point].image)
     }
+
+    function random_bg_color() {
+        var x = Math.floor(Math.random() * 256);
+        var y = Math.floor(Math.random() * 256);
+        var z = Math.floor(Math.random() * 256);
+        var bgColor = "rgb(" + x + "," + y + "," + z + ")";
+        console.log(bgColor);
+        document.body.style.background = bgColor;
+        }
+        random_bg_color();
 
     document.addEventListener('mousemove', reportPos);
 
