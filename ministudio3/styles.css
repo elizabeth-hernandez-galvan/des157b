@@ -18,6 +18,25 @@ h1{
     align-items: center;
 }
 
+.text{
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.img1{
+    background-image: url("images/jiji_camp.jpg");
+    color: #fff;
+}
+
+.img2{
+    background-image: url("images/park.jpg");
+    color: #fff;
+}
+
+.img3{
+    background-image: url("images/luna_park.jpg");
+    color: #fff;
+}
+
 .tap-target {
     display: flex;
     flex-direction: column;
@@ -32,8 +51,6 @@ h1{
   
     font-size: 1.125em;
     text-align: center;
-    color: #fff;
-    background-image: url("images/park.jpg");
     background-size: cover;
     background-color: #29e;
   
