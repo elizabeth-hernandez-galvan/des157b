@@ -8,12 +8,22 @@
     <title>Library Liberty</title>
 
     <script src = "https://cdnjs.cloudflare.com/ajax/libs/granim/2.0.0/granim.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+    
     <script src="granim.min.js"></script>
+    <script src="interact.min.js"></script>
 
     <script src="script.js" defer></script>
     <link href="styles.css" rel="stylesheet">
 </head>
 <body>
-    <canvas id="granim-canvas"></canvas>
+    <canvas id="granim-canvas">
+        <div class="tap-target">
+            <p>Tap to change color</p>
+            <p>Doubletap to change size</p>
+            <p>Hold to rotate</p>
+          </div>
+    </canvas>
 </body>
 </html>
