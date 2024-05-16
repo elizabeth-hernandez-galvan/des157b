@@ -132,9 +132,9 @@ footer p a{
 
     #granim-canvas {
         width: 100%;
-        height: 225vh;
+        height: 140vh;
     }
     footer{
-        bottom: -120%;
+        bottom: -30%;
     }
 }
