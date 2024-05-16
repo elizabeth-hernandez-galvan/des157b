@@ -11,20 +11,28 @@
 
     <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
     
-    <!-- <script src="granim.min.js"></script> -->
-
     <script src="script.js" defer></script>
     <link href="styles.css" rel="stylesheet">
 </head>
-<body id="granim-canvas">
-        <h1>Library Liberty</h1>
+<body>
+        
         <main>
-        <div class="tap-target">
-            <p>Tap to change color</p>
-            <p>Doubletap to change size</p>
-            <p>Hold to rotate</p>
-        </div>
+            <h1>Library Liberty</h1>
+            <div class="container">
+                <div class="tap-target">
+                    <p>Tap to change color</p>
+                    <p>Doubletap to change size</p>
+                    <p>Hold to rotate</p>
+                </div>
+            </div>
+            <canvas id="granim-canvas"></canvas>
         </main>
+
+        <footer>
+            <p>Libraries Used: </p>
+            <p><a href="https://interactjs.io/">InteractJS</a></p>
+            <p><a href="https://sarcadass.github.io/granim.js/">GranimJS</a></p>
+        </footer>
     
 </body>
 </html>
