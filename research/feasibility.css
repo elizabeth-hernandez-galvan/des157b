@@ -1,0 +1,61 @@
+body {
+    font-family: "Share Tech", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: antiquewhite;
+}
+
+h1{
+    margin-top: 5%;
+    text-align: center;
+    font-size: 4rem;
+}
+
+h2{
+    text-align: center;
+    font-size: 2rem;
+    padding-bottom: 2%;
+    border-bottom: 5px solid black;
+}
+
+.container {
+    display:flex;
+    flex-wrap:wrap;
+    gap:2rem;
+    margin: 0 5%;
+}
+
+/* boxes */
+.container > * {
+    width:100%;
+    background:white;
+    border-radius:.4rem;
+}
+
+/* headings */
+.container .heading {
+    background: lightsalmon;
+    margin:0;
+    padding:1rem;
+    border-top-left-radius:.4rem;
+    border-top-right-radius:.4rem;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+/* content */
+.container .padded {
+    padding: 1rem 1rem;
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+@media (min-width:768px) {
+    .container > * {
+        width:calc((100% - 4rem) / 3);
+    }
+}
+
+
+  
