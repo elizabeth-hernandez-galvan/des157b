@@ -34,24 +34,31 @@
         <pre>
             const video = document.getElementById('video');
 
-            video.addEventListener('playing', function(){
+            function handlePlay(){
                 loading.style.display = 'none';
-            })
+            }
+
+            video.addEventListener('playing', handlePlay);
         </pre>
     </code>
 
     <h2>Function Expression</h2>
     <code>
         <pre>
-            const video = video.addEventListener('playing', function(){
+            const video = document.getElementById('video');
+            
+            video.addEventListener('playing', function(){
                 loading.style.display = 'none';
             })
+
         </pre>
     </code>
 
     <h2>Arrow Function</h2>
     <code>
         <pre>
+            const video = document.getElementById('video');
+            
             video.addEventListener('playing', () => {
                 loading.style.display = 'none';
             });
