@@ -11,6 +11,7 @@ const addFriendForm = document.getElementById("add-friend");
 const editFriendForm = document.getElementById("edit-friend");
 const friendList = document.querySelector("main ol");
 const inputs = document.querySelectorAll("#add-friend input:not([type=submit])");
+let thisRecord;
 
 newBtn.addEventListener("click", function(event){
     event.preventDefault();
@@ -25,13 +26,14 @@ addFriendForm.addEventListener("submit", function(event){
 
 async function addFriend(){
     const newFriend = {};
+
     for(let i=0; i<inputs.length; i++){
         let key = inputs[i].getAttribute('name');
         let value = inputs[i].value;
         newFriend[key] = value;
     }
 
-    if (newFriend.fname != "" && newFriend.lname != "" && newFriend.email !="") {
+    if (newFriend.fname !="" && newFriend.lname !="" && newFriend.email !="") {
         const newFriendData = new Parse.Object('Friends');
         newFriendData.set('fname', newFriend.fname);
         newFriendData.set('lname', newFriend.lname);
@@ -46,7 +48,7 @@ async function addFriend(){
 
     try {
         const result = await newFriendData.save();
-        console.log('Friends created', result);
+        // console.log('Friends created', result);
         resetFormFields();
         addFriendForm.className = "add-friend-offscreen";
         friendList.innerHTML = '';
@@ -66,16 +68,94 @@ function resetFormFields(){
     document.getElementById('linkedin').value = 'https://linkedin.com';
 }
 
-for(let i=0; i<editBtns.length; i++){
-    editBtns[i].addEventListener("click", function(event){
-        event.preventDefault();
-        addFriendForm.className = "add-friend-onscreen";
-    })
+// for(let i=0; i<editBtns.length; i++){
+//     editBtns[i].addEventListener("click", function(event){
+//         event.preventDefault();
+//         addFriendForm.className = "add-friend-onscreen";
+//     })
+// }
+
+document.addEventListener('click',function(event){
+    if (event.target.matches('.fa-edit')) {
+        // addFriendForm.className = "add-friend-onscreen";
+        thisRecord = event.target.getAttribute('id').slice(2);
+        // console.log(thisRecord);
+        setForm(thisRecord);
+    }
+}, false)
+
+async function setForm(recordID){
+    const friends = Parse.Object.extend('Friends');
+    const query = new Parse.Query(friends);
+    query.equalTo('objectID', recordID);
+
+    try {
+        const results = await query.find();
+        results.forEach(function(thisFriend){
+            const lname = thisFriend.get('lname');
+            const fname = thisFriend.get('fname');
+            const email = thisFriend.get('email');
+            const facebook = thisFriend.get('facebook');
+            const twitter = thisFriend.get('twitter');
+            const instagram = thisFriend.get('instagram');
+            const linkedin = thisFriend.get('linkedin');
+    
+            document.getElementById('fname-edit').value = fname;
+            document.getElementById('lname-edit').value = lname;
+            document.getElementById('email-edit').value = email;
+            document.getElementById('facebook-edit').value = facebook;
+            document.getElementById('twitter-edit').value = twitter;
+            document.getElementById('instagram-edit').value = instagram;
+            document.getElementById('linkedin-edit').value = linkedin;
+        })
+        editFriendForm.className = "add-friend-offscreen";
+    } catch (error) {
+        console.error('Error while fetching friends', error);
+    }
+}
+
+async function updateRecord(recordID){
+    const theFields = document.querySelectorAll("#edit-friend input:not([type=submit])")
+    const editedRecord = {};
+    let key;
+    let value;
+
+    for (let i = 0; i < theFields.length; i++) {
+        key = theFields[i].getAttribute('name');
+        value = theFields[i].value;
+        editedRecord[key] = value;
+    }
+
+    const friends = Parse.Object.extend('Friends');
+    const query = new Parse.Query(friends);
+
+    try {
+        const object = await query.get(recordID);
+        object.set('fname', editedRecord.fname);
+        object.set('lname', editedRecord.lname);
+        object.set('email', editedRecord.email);
+        object.set('facebook', editedRecord.facebook);
+        object.set('twitter', editedRecord.twitter);
+        object.set('instagram', editedRecord.instagram);
+        object.set('linkedin', editedRecord.linkedin);
+        
+        try {
+            await object.save();
+            editFriendForm.className = "add-friend-offscreen";
+            friendList.innerHTML = '';
+            displayFriends();
+        } catch (error) {
+            console.error('Error while updating friends', error);
+        }
+    } catch (error) {
+        console.error('Error while retrieving object friends', error);
+    }
 }
 
 editFriendForm.addEventListener("submit", function(event){
     event.preventDefault();
-    editFriendForm.className = "add-friend-offscreen";
+    // editFriendForm.className = "add-friend-offscreen";
+    updateRecord(thisRecord);
 })
 
 async function displayFriends() {
