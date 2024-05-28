@@ -1,0 +1,100 @@
+* {
+    box-sizing:border-box;
+}
+
+h1{
+    text-align: center;
+}
+
+/* flexbox container */
+.flexbox {
+    display:flex;
+    flex-wrap:wrap;
+}
+
+/* columns (mobile) */
+.flexbox > * {
+    width:100%;
+    padding:1rem;
+}
+
+/* background colors */
+.flexbox > .header {background:#f5d55f}
+.flexbox > .main-content {background:#fff}
+.flexbox > .left-sidebar {background:#c5ed77}
+.flexbox > .right-sidebar {background:#f97171}
+.flexbox > .footer {background:#72c2f1}
+
+.header , .footer {
+    height: 15vh;
+}
+
+#left-dropzone, #right-dropzone {
+    height: 60vh;
+}
+
+#left-dropzone, #right-dropzone > h2 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+.dropzone {
+    border: dashed 4px black;
+    border-radius: 4px;
+    margin: 10px auto 30px;
+    padding: 10px;
+    width: 80%;
+    transition: background-color 0.3s;
+}
+  
+.drop-active {
+    border-color: #aaa;
+}
+  
+.drop-target {
+    background-color: #29e;
+    border-color: #fff;
+    border-style: solid;
+}
+
+#yes-drop {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    height: 50vh;
+    background-color: lightgrey;
+    color: black;
+    text-align: center;
+    border-radius: 0.75em;
+    padding: 4%;
+    touch-action: none;
+    user-select: none;
+    transform: translate(0px, 0px);
+}
+
+/* Design For Tablet */
+@media (min-width:768px) {
+    .flexbox > .left-sidebar,
+    .flexbox > .right-sidebar {
+        width:50%;
+    }
+}
+
+/* Design For Desktop*/
+@media (min-width:1024px) {
+    .flexbox > .header {
+        order:-2; /* header first */
+    }
+    .flexbox > .left-sidebar {
+        /* left sidebar second (first in second row) */
+        order:-1; 
+    }
+    .flexbox > .main-content {
+        width:40%;
+    }
+    .flexbox > .left-sidebar,
+    .flexbox > .right-sidebar {
+        width:30%;
+    }
+}

@@ -15,11 +15,44 @@
      <!-- link to styles.css -->
      <link href="styles.css" rel="stylesheet">
  
+     <!-- link to interact.js -->
+     <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js" defer></script>
+
      <!-- link to script.js -->
      <script src="script.js" defer></script>
 
 </head>
+
 <body>
     
+    <div class="flexbox">
+        <header class="header">
+            <h1>Capstone Project</h1>
+        </header>
+        
+        <main class="main-content">
+            <div id="yes-drop" class="draggable">
+                <p> You can drag this element </p>
+            </div>
+        </main>
+        
+        <section class="left-sidebar">
+            <div id="left-dropzone" class="dropzone">
+                <h2>This is an Advantage</h2>
+            </div>
+        </section>
+        
+        <aside class="right-sidebar">
+            <div id="right-dropzone" class="dropzone">
+                <h2>This is a Disadvantage</h2>
+            </div>
+        </aside>
+        
+        <footer class="footer"></footer>
+    </div>
+
+    
+
 </body>
+
 </html>
