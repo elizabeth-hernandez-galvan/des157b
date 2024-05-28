@@ -1,5 +1,8 @@
 * {
     box-sizing:border-box;
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;  
 }
 
 h1{
@@ -52,25 +55,76 @@ h1{
 }
   
 .drop-target {
-    background-color: #29e;
-    border-color: #fff;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-color: #000;
     border-style: solid;
 }
 
 #yes-drop {
-    width: 80%;
+    width: 60%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 10%;
-    height: 50vh;
+    margin-top: 20%;
+    height: 40vh;
     background-color: lightgrey;
     color: black;
-    text-align: center;
     border-radius: 0.75em;
     padding: 4%;
     touch-action: none;
     user-select: none;
     transform: translate(0px, 0px);
+}
+
+#yes-drop.can-drop {
+    color: #fff;
+    background-color: #000;
+}
+#concept{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    line-height: 1.5;
+}
+
+#info{
+   text-align: right;
+}
+
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.popup-content {
+    text-align: center;
+
+}
+
+.popup .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
 }
 
 /* Design For Tablet */
@@ -91,10 +145,10 @@ h1{
         order:-1; 
     }
     .flexbox > .main-content {
-        width:40%;
+        width:33.33%;
     }
     .flexbox > .left-sidebar,
     .flexbox > .right-sidebar {
-        width:30%;
+        width:33.33%;
     }
 }
