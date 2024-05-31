@@ -82,6 +82,12 @@ document.addEventListener('click',function(event){
         // console.log(thisRecord);
         setForm(thisRecord);
     }
+
+    if (event.target.matches('.fa-times-circle')) {
+        thisRecord = event.target.getAttribute('id').slice(2);
+        deleteRecord(thisRecord);
+    }
+
 }, false)
 
 async function setForm(recordID){
@@ -149,6 +155,30 @@ async function updateRecord(recordID){
         }
     } catch (error) {
         console.error('Error while retrieving object friends', error);
+    }
+}
+
+async function deleteRecord(recordID) {
+    const youAreSure = confirm('Are you sure you want to delete this record?');
+    if (youAreSure) {
+        const query = new Parse.Query('Friends');
+        try {
+            const object = await query.get(recordID);
+
+            try {
+                await object.destroy();
+                document.getElementById(`r-${recordID}`).className = remove;
+                setTimeout(function(){
+                    const elem = document. getElementById(`r-${recordID}`);
+                    elem.parentNode.removeChild(elem);
+                }, 1500);
+            } catch (error) {
+                console.error('Error while deleting ParseObject', error);
+            }
+
+        } catch (error) {
+            console.error('Error while retrieving ParseObject', error);
+        }
     }
 }
 
