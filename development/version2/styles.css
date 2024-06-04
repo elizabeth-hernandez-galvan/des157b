@@ -1,3 +1,8 @@
+body{
+    height: 100vh;
+}
+
+
 /* Layout Home Screen */
 .flex-container {
     display: flex;
@@ -13,6 +18,7 @@
     box-shadow:0 5px 10px rgba(0, 0, 0, 25%);
     margin-bottom: 2%;
     width: 30%;
+    height: 40vh;
     font-size: 30px;
 }
 .flex-container figure {
@@ -24,8 +30,8 @@
     display:block;
     height:auto;
     width: 100%;
-    height: 100%; 
-    object-fit: contain;
+    height: 25vh; 
+    object-fit: cover;
 }
 
 .flex-container a {
@@ -39,6 +45,13 @@
 
 .flex-container a:hover {
     text-decoration:underline;
+}
+
+.centered-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Adjust based on your needs */
 }
 
 /* Colors */
@@ -70,8 +83,6 @@
 }
 
 #droppable { 
-    width: 35vw;
-    height: 100vh;
     padding: 0 0.5em; 
     float: left; 
     /* margin: 10px;  */
@@ -82,111 +93,82 @@
     text-align: center;
 }
 
-/* Popup */
-.popup-overlay {
-    display: none;
-    position: fixed;
+
+
+/* ATS Section */
+.popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* position: fixed; */
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.5);
+    background-color: antiquewhite;
+}
+  
+.popup-container {
+    display: flex;
+    flex-direction: row-reverse;
+    column-gap: 5vw;
+    justify-content: center; 
+    width: 90vw; 
+    max-width: 100vw;
+    margin: 0 auto;
+}
+  
+.content-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-color: white; */
+    height: 80vh;
+    border-radius: 5px;
+    flex: 1; /* Allows the boxes to grow and shrink equally */
 }
 
-.popup {
-    position: absolute;
-    width: 96.5vw;
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+.choice {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.popup-content {
-    text-align: center;
+.form-control{
+    margin-top: 5%;
+    border: 5px solid black;
+    background-color: antiquewhite;
+    height: 50vh;
+    width: 35vw;
 }
 
-.popup .close {
+label{
+    margin-top: 5%;
+}
+
+.btn{
+    border-radius: 10%;
+    background-color: antiquewhite;
+    width: 15vw;
+    height: 5vh;
+}
+
+.btns{
+    width: 40vw;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 20px;
+}
+
+.close {
     position: absolute;
     top: 2%;
     right: 5%;
     font-size: 3rem;
     cursor: pointer;
     color: #333;
-}
-
-
-
-/* ATS Section */
-.ats {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: center;
-    flex-wrap: wrap;
-    column-gap: 7vw;
-    background-color:antiquewhite;
-}
-
-.ats > * {
-    width: 40vw;
-    height: 95vh;
-}
-
-.sidebar1{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 95vh;
-    /* background-color: #F25F5C; */
-    font-size: 30px;
-}
-
-.sidebar2{
-    display: flex;
-    flex-direction: column;
-    height: 95vh;
-    /* background-color: #70C1B3; */
-    font-size: 30px;
-}
-
-#text-ats{
-    text-align: left;
-    margin: 5%;
-    line-height: 1.5;
-    width: 30vw;
-}
-
-#text-opt{
-    margin-top: 10%;
-}
-
-.form-control{
-    height: 70vh;
-    width: 35vw;
-}
-
-.form-group{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.center {
-    text-align: center;
-}
-
-.btn{
-    border-radius: 10%;
-    background-color: #fff;
-    width: 15vw;
-    height: 5vh;
-}
-
-.btns{
-    width: 35vw;
-    display: flex;
-    justify-content: space-evenly;
-    font-size: 20px;
 }
 
 .fade {
@@ -204,14 +186,11 @@
 .light {
     display: none;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 300px;
-    height: 200px;
-    margin-left: -150px;
-    margin-top: -100px;
-    padding: 10px;
-    border: 2px solid #FFF;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    border: 10px solid #FFF;
     background: #CCC;
     z-index:1002;
     overflow:visible;
