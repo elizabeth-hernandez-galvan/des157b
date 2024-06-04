@@ -31,6 +31,22 @@
     background:#72c2f1;
 }
 
+.draggable { 
+    width: 100px; 
+    height: 100px; 
+    padding: 0.5em; 
+    float: left; 
+    margin: 10px 10px 10px 0; 
+}
+
+#droppable { 
+    width: 150px; 
+    height: 150px; 
+    padding: 0.5em; 
+    float: left; 
+    margin: 10px; 
+}
+
 /* tablet breakpoint */
 @media (min-width:768px) {
     .left-sidebar-grid {
