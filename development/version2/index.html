@@ -37,7 +37,7 @@
         <div id="col-1">
             <figure>
                 <img src="https://i.postimg.cc/qRh1Mj3k/fotor-ai-2024060411615.jpg" alt="Abstract image" />
-                <figcaption><a href="#">Applicant Tracking Systems (ATS)</a></figcaption>
+                <figcaption><a href="#popupOverlay">Applicant Tracking Systems (ATS)</a></figcaption>
             </figure>
         </div>
         <div id="col-2">
@@ -72,55 +72,51 @@
         </div>  
     </div>
 
+    <div class="popup-overlay" id="popupOverlay">
 
-    <div class="ats">
-    
-        <main class="main-content">
-            <div class="sidebar1">
-                <div>
-                    <div id="droppable" class="form-group">
+        <div class="popup" id="popup">
+            <span class="close" id="closePopup">&times;</span>
+            <div class="popup-content">
+
+                <div class="ats">
+                
+                    <section>
+                        <div class="sidebar1">
+                            <div>
+                                <div id="droppable" class="form-group">
+                                    
+                                    <div>
+                                        <input type="text" id="word" name="program" class="form-control" />
+                                    </div>
+                                    
+                                    <label class="center"><strong>Make a choice here</strong></label><br>
+
+                                    <div class="btns">
+                                        <button class="btn" id="reset" type="button"><span></span> Pro</button>
+
+                                        <button class="btn" id="submit"><span></span> Con</button>
+                                    </div>
+                                </div>
+
+                            </div><br>
+                        </div>
+                    </section>
+            
+                    <section class="sidebar2">
+                        
+                        <label class="center" id="text-opt"><strong>Drag text into Box</strong></label>
                         
                         <div>
-                            <input type="text" id="word" name="program" class="form-control" />
-                        </div>
+                                <p class="draggable" id="text-ats">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis ipsa quasi obcaecati eaque dignissimos nemo laborum praesentium. Fuga illo eligendi aspernatur, sunt sint maxime iusto corrupti magnam ducimus inventore consequatur?
+                                </p>
                         
-                        <label class="center">Make a choice here</label><br>
-
-                        <div class="btns">
-                            <button class="btn" id="reset" type="button"><span></span> Pro</button>
-
-                            <button class="btn" id="submit"><span></span> Con</button>
                         </div>
-                    </div>
 
-                </div><br>
+                    </section>    
+                </div>
             </div>
-        </main>
-        
-        <section class="sidebar2">
-            
-            <label class="center">Select your option</label>
-            
-            <div>
-                    <p class="draggable">Text 1</p><br>
-                    <p class="draggable">Text 2 </p><br>
-                    <p class="draggable">Text 3</p><br>
-                    <p class="draggable">Text 4</p><br>
-                    <p class="draggable">Text 5</p><br>
-                    <p class="draggable">Text 6</p><br>
-                    <p class="draggable">Text 7</p><br>
-                    <p class="draggable">Text 8</p><br>
-                    <p class="draggable">Text 9</p><br>
-                    <p class="draggable">Text 10</p>
-                </ul>
-                <p></p>
-            </div>
-
-        </section>
-        
-        <footer class="footer">
-            
-        </footer>
+        </div>
     </div>
 </body>
 
