@@ -1,31 +1,34 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const popupOverlay = document.getElementById('popupOverlay');
-    const ats = document.getElementById('ats');
-    const closePopup = document.getElementById('closePopup');
+window.document.onkeydown = function (e) {
+  if (!e) {
+      e = event;
+  }
+  if (e.keyCode == 27) {
+      lightbox_close();
+  }
+}
 
-    // Function to open the popup
-    function openPopup() {
-        popupOverlay.style.display = 'block';
-    }
+function lightbox_open(el) {        
+  window.scrollTo(0,0);
 
-    // Function to close the popup
-    function closePopupFunc() {
-        popupOverlay.style.display = 'none';
-    }
+  var anchors = document.querySelectorAll('a.lightbox');
+  var lights = document.querySelectorAll('.light');
+  var fades = document.querySelectorAll('.fade');
 
-    // Event listeners
-    openPopup();
+  for (var i = 0; i < anchors.length; i++) {
+      if (anchors[i] == el) {
+          lights[i].style.display = 'block';
+          fades[i].style.display = 'block';
+      }
+  }
+}
 
-    // Close the popup when the close button is clicked
-    closePopup.addEventListener('click', closePopupFunc);
+function lightbox_close() {
+  var els = document.querySelectorAll('.light,.fade');
+  for (var i = 0; i < els.length; i++) {
+      els[i].style.display = 'none';
+  }
+}
 
-    // Close the popup when clicking outside the popup content
-    popupOverlay.addEventListener('click', function (event) {
-        if (event.target === popupOverlay) {
-            closePopupFunc();
-        }
-    });
-});
 
 
 $( function() {
