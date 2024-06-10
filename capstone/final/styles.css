@@ -1,0 +1,197 @@
+body{
+    height: 100vh;
+}
+
+
+/* Layout Home Screen */
+.flex-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap:2%;
+}
+
+.flex-container > * {
+    background:#fff;
+    border-radius:.5em;
+    overflow:hidden;
+    box-shadow:0 5px 10px rgba(0, 0, 0, 25%);
+    margin-bottom: 2%;
+    width: 30%;
+    height: 40vh;
+    font-size: 30px;
+}
+.flex-container figure {
+    margin:0;
+    padding:0;
+    display:block;
+}
+.flex-container img {
+    display:block;
+    height:auto;
+    width: 100%;
+    height: 25vh; 
+    object-fit: cover;
+}
+
+.flex-container a {
+    margin:0;
+    padding:.5em 1em;
+    text-align:center;
+    font-style:italic;
+    text-decoration:none;
+    color: black;
+}
+
+.flex-container a:hover {
+    text-decoration:underline;
+}
+
+.centered-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Adjust based on your needs */
+}
+
+/* Colors */
+#col-1{
+    background-color: #F25F5C;
+}
+#col-2{
+    background-color: #FFE066;
+}
+#col-3{
+    background-color: #70C1B3;
+}
+#col-4{
+    background-color: #F2F3D9;
+}
+#col-5{
+    background-color: #F7A9A8;
+}
+#col-6{
+    background-color: #247BA0;
+}
+
+/* Drag and Drop */
+.draggable { 
+    width: 35vw;
+    padding: 0.5em; 
+    float: left; 
+    margin: 10px 10px 10px 0; 
+}
+
+#droppable { 
+    padding: 0 0.5em; 
+    float: left; 
+    /* margin: 10px;  */
+}
+
+/* Header */
+.header{
+    text-align: center;
+}
+
+
+
+/* ATS Section */
+.popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: antiquewhite;
+}
+  
+.popup-container {
+    display: flex;
+    flex-direction: row-reverse;
+    column-gap: 5vw;
+    justify-content: center; 
+    width: 90vw; 
+    max-width: 100vw;
+    margin: 0 auto;
+}
+  
+.content-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-color: white; */
+    height: 80vh;
+    border-radius: 5px;
+    flex: 1; /* Allows the boxes to grow and shrink equally */
+}
+
+.choice {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-control{
+    margin-top: 5%;
+    border: 5px solid black;
+    background-color: antiquewhite;
+    height: 50vh;
+    width: 35vw;
+}
+
+label{
+    margin-top: 5%;
+}
+
+.btn{
+    border-radius: 10%;
+    background-color: antiquewhite;
+    width: 15vw;
+    height: 5vh;
+}
+
+.btns{
+    width: 40vw;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 20px;
+}
+
+.close {
+    position: absolute;
+    top: 2%;
+    right: 5%;
+    font-size: 3rem;
+    cursor: pointer;
+    color: #333;
+}
+
+.fade {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    z-index:1001;
+    opacity:.70;
+}
+
+.light {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    border: 10px solid #FFF;
+    background: #CCC;
+    z-index:1002;
+    overflow:visible;
+}
