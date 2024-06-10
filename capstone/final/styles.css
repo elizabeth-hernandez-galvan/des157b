@@ -18,7 +18,8 @@ body{
     overflow:hidden;
     box-shadow:0 5px 10px rgba(0, 0, 0, 25%);
     margin-bottom: 2%;
-    width: 30%;
+    width: calc(30% - 2%);
+    max-width: 400px;
     height: 40vh;
     font-size: 30px;
 }
@@ -241,4 +242,76 @@ label{
 #popup5,
 #popup6{
     z-index: 2;
+}
+
+/* Medium screens */
+@media screen and (max-width: 768px) and (min-width: 481px) {
+    .flex-container {
+        justify-content: center;
+    }
+
+    .flex-container > * {
+        width: calc(45% - 2%);
+    }
+
+    .lightbox{
+        font-size: 0.8em;
+    }
+}
+
+/* Small screens */
+@media screen and (max-width: 480px) {
+    body{
+        padding: 5%;
+    }
+
+    .flex-container {
+        justify-content: center;
+    }
+
+    .flex-container > * {
+        width: calc(100% - 2%);
+        font-size: 25px;
+        margin-bottom: 5%;
+    }
+
+    /* Hide non-essential elements in popup */
+    .content-box .choice,
+    .content-box .hide {
+        display: none;
+    }
+
+    /* Show only necessary elements */
+    .content-box .draggable,
+    .content-box .btns  {
+        display: block;
+    }
+
+    .popup-container{
+        flex-direction: column-reverse;
+    }
+
+    .draggable{
+        width: 50vw;
+    }
+
+    .btns{
+        width: 60vw;
+    }
+
+    .btn{
+        width: 25vw;
+        font-size: 15px;
+    }
+
+    #countDisplay1,
+    #countDisplay2,
+    #countDisplay3, 
+    #countDisplay4,
+    #countDisplay5,
+    #countDisplay6{
+        font-size: 2em;
+        height: 100vh;
+        width: 100vw;
+    }
 }
