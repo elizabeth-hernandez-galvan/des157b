@@ -83,7 +83,7 @@ body{
     margin: 10px 10px 10px 0; 
 }
 
-#droppable { 
+.droppable { 
     padding: 0 0.5em; 
     float: left; 
     /* margin: 10px;  */
@@ -198,6 +198,31 @@ label{
     overflow:visible;
 }
 
-.countDisplay{
-    z-index:3;
+.hidden {
+    display: none; /* Initially hide the popup */
+}
+
+#countDisplay1,
+#countDisplay2,
+#countDisplay3{
+    display: none;
+    text-align: center; 
+    line-height: 100vh; 
+    font-family: "Lilita One", sans-serif;
+    font-size: 5em;
+    z-index: 999;
+    /* background-color: #247BA0; */
+    background-image: url('imgs/night.jpeg');
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+}
+
+#popup1,
+#popup2,
+#popup3{
+    z-index: 2;
 }

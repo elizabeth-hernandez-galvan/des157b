@@ -11,7 +11,7 @@ async function saveData(category, buttonClicked) {
   try {
       await dataObject.save();
       console.log('Data saved successfully');
-      getCount(category, buttonClicked);
+      await getCount(category, buttonClicked);
   } catch (error) {
       console.error('Error while saving data: ', error);
   }
@@ -27,7 +27,7 @@ async function getCount(category, buttonClicked) {
   try {
       const count = await query.count();
       console.log(`Count for ${category} - ${buttonClicked}: ${count}`);
-      document.getElementById('countDisplay').innerText = `Count for ${category} - ${buttonClicked}: ${count}`;
+      document.getElementById(`countDisplay${buttonClicked.charAt(buttonClicked.length - 1)}`).innerText = ` ${count} people agree with you`;
   } catch (error) {
       console.error('Error while retrieving count: ', error);
   }
@@ -35,8 +35,16 @@ async function getCount(category, buttonClicked) {
 
 function handleButtonClick(category, buttonClicked) {
   saveData(category, buttonClicked);
-  document.getElementById('countDisplay').classList.remove('hidden');
-  
+  if (buttonClicked === 'Button1') {
+    var countDisplay1 = document.getElementById("countDisplay1");
+    var computedStyle = window.getComputedStyle(countDisplay1);
+    lightbox_close();
+    if (computedStyle.display === "none") {
+        countDisplay1.style.display = "block"; // Show the div
+    } else {
+        countDisplay1.style.display = "none"; // Hide the div
+    }
+  }
 }
 
 window.document.onkeydown = function (e) {
@@ -74,7 +82,7 @@ function lightbox_close() {
 
 $( function() {
 	$( ".draggable" ).draggable();
-	$( "#droppable" ).droppable({
+	$( ".droppable" ).droppable({
 	  drop: function( event, ui ) {
 		$( this )
 		  .addClass( "ui-state-highlight" )
