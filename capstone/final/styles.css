@@ -214,7 +214,10 @@ label{
 
 #countDisplay1,
 #countDisplay2,
-#countDisplay3{
+#countDisplay3, 
+#countDisplay4,
+#countDisplay5,
+#countDisplay6{
     display: none;
     text-align: center; 
     line-height: 100vh; 
@@ -233,6 +236,9 @@ label{
 
 #popup1,
 #popup2,
-#popup3{
+#popup3, 
+#popup4,
+#popup5,
+#popup6{
     z-index: 2;
 }
