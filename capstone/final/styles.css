@@ -181,7 +181,7 @@ label{
     width: 100%;
     height: 100%;
     background-color: #000;
-    z-index:1001;
+    z-index:1;
     opacity:.70;
 }
 
@@ -194,6 +194,10 @@ label{
     height: 100vh;
     border: 10px solid #FFF;
     background: #CCC;
-    z-index:1002;
+    z-index:2;
     overflow:visible;
+}
+
+.countDisplay{
+    z-index:3;
 }

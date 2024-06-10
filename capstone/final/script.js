@@ -35,6 +35,8 @@ async function getCount(category, buttonClicked) {
 
 function handleButtonClick(category, buttonClicked) {
   saveData(category, buttonClicked);
+  document.getElementById('countDisplay').classList.remove('hidden');
+  
 }
 
 window.document.onkeydown = function (e) {
