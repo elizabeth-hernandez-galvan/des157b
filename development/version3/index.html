@@ -22,10 +22,13 @@
     <script src="https://code.jquery.com/jquery-3.7.1.js" defer></script>
     <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js" defer></script>
 
+    <!-- link to Back4App -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parse/3.2.0/parse.min.js" defer></script>
+
     <!-- link to script.js -->
     <script src="script.js" defer></script>
 
-    <title>Version 2</title>
+    <title>Version 3</title>
 </head>
 
 <body>
@@ -55,9 +58,9 @@
                             </div>
 
                             <div class="btns">
-                                <button class="btn" id="reset" type="button"><span></span>Advantage</button>
+                                <button class="btn" id="reset" type="button" onclick="handleButtonClick('Category1', 'Button1')">Advantage</button>
 
-                                <button class="btn" id="submit"><span></span>Disadvantage</button>
+                                <button class="btn" id="submit" onclick="handleButtonClick('Category1', 'Button2')">Disadvantage</button>
                             </div>
                         </div>
                         
@@ -93,9 +96,9 @@
                             </div>
 
                             <div class="btns">
-                                <button class="btn" id="reset" type="button"><span></span>Advantage</button>
+                                <button class="btn" id="reset" type="button" onclick="handleButtonClick('Category2', 'Button1')">Advantage</button>
 
-                                <button class="btn" id="submit"><span></span>Disadvantage</button>
+                                <button class="btn" id="submit" onclick="handleButtonClick('Category2', 'Button1')">Disadvantage</button>
                             </div>
                         </div>
                         
