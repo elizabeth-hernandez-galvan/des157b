@@ -27,7 +27,7 @@ async function getCount(category, buttonClicked) {
   try {
       const count = await query.count();
       console.log(`Count for ${category} - ${buttonClicked}: ${count}`);
-      document.getElementById(`countDisplay${buttonClicked.charAt(buttonClicked.length - 1)}`).innerText = ` ${count} people agree with you`;
+      document.getElementById(`countDisplay${buttonClicked.charAt(buttonClicked.length - 1)}`).innerText = ` ${count-1} people agree with you`;
   } catch (error) {
       console.error('Error while retrieving count: ', error);
   }
@@ -35,46 +35,7 @@ async function getCount(category, buttonClicked) {
 
 function handleButtonClick(category, buttonClicked) {
   saveData(category, buttonClicked);
-  // if (buttonClicked === 'Button1') {
-  //   var countDisplay1 = document.getElementById("countDisplay1");
-  //   var computedStyle = window.getComputedStyle(countDisplay1);
-  //   lightbox_close();
-  //   if (computedStyle.display === "none") {
-  //       countDisplay1.style.display = "block"; // Show the div
-  //   } else {
-  //       countDisplay1.style.display = "none"; // Hide the div
-  //   }
-  // }
-  // if (buttonClicked === 'Button2') {
-  //   var countDisplay2 = document.getElementById("countDisplay2");
-  //   var computedStyle = window.getComputedStyle(countDisplay2);
-  //   lightbox_close();
-  //   if (computedStyle.display === "none") {
-  //       countDisplay2.style.display = "block"; // Show the div
-  //   } else {
-  //       countDisplay2.style.display = "none"; // Hide the div
-  //   }
-  // }
-  // if (buttonClicked === 'Button3') {
-  //   var countDisplay3 = document.getElementById("countDisplay3");
-  //   var computedStyle = window.getComputedStyle(countDisplay3);
-  //   lightbox_close();
-  //   if (computedStyle.display === "none") {
-  //       countDisplay3.style.display = "block"; // Show the div
-  //   } else {
-  //       countDisplay3.style.display = "none"; // Hide the div
-  //   }
-  // }
-  // if (buttonClicked === 'Button4') {
-  //   var countDisplay4 = document.getElementById("countDisplay4");
-  //   var computedStyle = window.getComputedStyle(countDisplay4);
-  //   lightbox_close();
-  //   if (computedStyle.display === "none") {
-  //       countDisplay4.style.display = "block"; // Show the div
-  //   } else {
-  //       countDisplay4.style.display = "none"; // Hide the div
-  //   }
-  // }
+  
   for (let i = 1; i <= 12; i++) {
     const countDisplay = document.getElementById(`countDisplay${i}`);
     if (buttonClicked === `Button${i}`) {

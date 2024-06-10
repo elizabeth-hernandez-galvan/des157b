@@ -107,7 +107,7 @@ body{
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: antiquewhite;
+    background-color: #89d6fb;
 }
   
 .popup-container {
@@ -141,7 +141,7 @@ body{
 .form-control{
     margin-top: 5%;
     border: 5px dotted black;
-    background-color: antiquewhite;
+    background-color: #d4f0fc;
     height: 50vh;
     width: 35vw;
 }
@@ -152,7 +152,7 @@ label{
 
 .btn{
     border-radius: 10%;
-    background-color: antiquewhite;
+    background-color: #d4f0fc;
     width: 15vw;
     height: 5vh;
 }
