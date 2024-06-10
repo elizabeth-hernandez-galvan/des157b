@@ -1,5 +1,6 @@
 body{
     height: 100vh;
+    font-family: "Poetsen One", sans-serif;
 }
 
 
@@ -91,6 +92,7 @@ body{
 /* Header */
 .header{
     text-align: center;
+    font-family: "Lilita One", sans-serif;
 }
 
 
@@ -138,7 +140,7 @@ body{
 
 .form-control{
     margin-top: 5%;
-    border: 5px solid black;
+    border: 5px dotted black;
     background-color: antiquewhite;
     height: 50vh;
     width: 35vw;
