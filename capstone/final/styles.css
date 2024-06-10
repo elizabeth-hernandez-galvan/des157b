@@ -93,6 +93,7 @@ body{
 .header{
     text-align: center;
     font-family: "Lilita One", sans-serif;
+    font-size: 1.5em;
 }
 
 
@@ -171,6 +172,15 @@ label{
     font-size: 3rem;
     cursor: pointer;
     color: #333;
+}
+
+.closeDisplay {
+    position: absolute;
+    top: -45%;
+    right: 5%;
+    font-size: 3rem;
+    cursor: pointer;
+    color: #fff;
 }
 
 .fade {

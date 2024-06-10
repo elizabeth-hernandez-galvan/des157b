@@ -26,8 +26,8 @@ async function getCount(category, buttonClicked) {
 
   try {
       const count = await query.count();
-      console.log(`Count for ${category} - ${buttonClicked}: ${count}`);
-      document.getElementById(`countDisplay${buttonClicked.charAt(buttonClicked.length - 1)}`).innerText = ` ${count-1} people agree with you`;
+      console.log(`Count for ${category} - ${buttonClicked}: ${count -1}`);
+      document.getElementById(`countDisplay${buttonClicked.charAt(buttonClicked.length - 1)}`).innerHTML = `${count-1} people agree with you <span class="closeDisplay" onClick="lightbox_closeDisplay()">&times;</span>`;
   } catch (error) {
       console.error('Error while retrieving count: ', error);
   }
@@ -70,6 +70,13 @@ function lightbox_open(el) {
 }
 
 function lightbox_close() {
+  var els = document.querySelectorAll('.light,.fade');
+  for (var i = 0; i < els.length; i++) {
+      els[i].style.display = 'none';
+  }
+}
+
+function lightbox_closeDisplay() {
   var els = document.querySelectorAll('.light,.fade');
   for (var i = 0; i < els.length; i++) {
       els[i].style.display = 'none';
