@@ -43,11 +43,11 @@ header, section, footer {
 }
 
 section:nth-child(even){
-    background-color: #89d6fb;
+    background-color: #d4f0fc;
 }
 
 section:nth-child(odd){
-    background-color: #d4f0fc;
+    background-color: #fff;
 }
 
 .container {
